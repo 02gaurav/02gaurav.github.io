@@ -8,7 +8,7 @@
 <body><main>
 <header><div class="mark">T</div><div class="brand">TezMind.</div></header>
 <h1>Privacy policy</h1>
-<p class="meta">Effective 11 October 2026 · Applies to the TezMind app for Android and iOS</p>
+<p class="meta">Effective 15 October 2026 · Applies to the TezMind app for Android and iOS</p>
 
 <p>TezMind ("the app", "we") is a puzzle and brain-training game made by Gaurav Kumar, an individual developer.
 This policy explains what information the app collects, why, and the choices you have.</p>
@@ -19,6 +19,10 @@ This policy explains what information the app collects, why, and the choices you
   <tr><td>Your Google account name, email address, profile photo link and a Firebase user ID, when you sign in with Google</td>
       <td>To create your account, show your name and photo in the app, and keep you signed in</td>
       <td>Google Firebase Authentication and Cloud Firestore (a <code>users</code> record with these fields, your sign-in method and the dates you created the account and last signed in)</td></tr>
+  <tr><td>Daily challenge results: your first name and last initial (for example "Gaurav K."), or "Hidden player" if you turn
+      off <strong>Profile → Show my name on leaderboards</strong>, plus your solve time, mistakes and hints</td>
+      <td>To rank you on the daily leaderboard, which anyone using TezMind can see (including players who aren't signed in)</td>
+      <td>Google Cloud Firestore (one result per day you take part)</td></tr>
   <tr><td>Game history: games played, level, score, time taken, and your theme and sound settings</td>
       <td>To show your history, progress, streaks and best scores</td>
       <td>Only on your device. It is not uploaded to our servers.</td></tr>
@@ -31,6 +35,7 @@ This policy explains what information the app collects, why, and the choices you
 <h2>Third-party services</h2>
 <ul>
   <li><strong>Google Sign-In and Firebase</strong> (Authentication, Cloud Firestore), provided by Google LLC: <a href="https://firebase.google.com/support/privacy">Firebase privacy</a></li>
+  <li><strong>Firebase App Check</strong> with <strong>Google Play Integrity</strong>, provided by Google LLC, which checks that requests come from the genuine app on a genuine device (to stop cheating and abuse): <a href="https://firebase.google.com/support/privacy">Firebase privacy</a></li>
   <li><strong>Google AdMob</strong>, provided by Google LLC: <a href="https://policies.google.com/technologies/ads">how Google uses information from apps that use its services</a></li>
 </ul>
 
@@ -45,13 +50,14 @@ You can also reset or delete your advertising ID in your phone's settings.</p>
 delete your account, clear the app's data, or uninstall the app.</p>
 
 <h2>Deleting your account and data</h2>
-<p>In the app, open <strong>Profile → Delete account</strong>. This permanently deletes your Firebase account and
-your <code>users</code> record, and clears the game history on that device. If you no longer have the app,
+<p>In the app, open <strong>Profile → Delete account</strong>. This permanently deletes your Firebase account,
+your <code>users</code> record and your daily leaderboard results, and clears the game history on that device. If you no longer have the app,
 follow the steps on the <a href="delete-account.html">account deletion page</a>.</p>
 
 <h2>Security</h2>
 <p>Information is sent over encrypted connections (HTTPS). Database security rules allow each signed-in user to
-read and write only their own record.</p>
+read and write only their own record. Leaderboard results (display name and times only) can be read by anyone using the app, and each player can
+post only their own result, once per day.</p>
 
 <h2>Children</h2>
 <p>TezMind is not directed at children under 13, and we do not knowingly collect personal information from them.
