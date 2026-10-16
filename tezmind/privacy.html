@@ -20,9 +20,9 @@ This policy explains what information the app collects, why, and the choices you
       <td>To create your account, show your name and photo in the app, and keep you signed in</td>
       <td>Google Firebase Authentication and Cloud Firestore (a <code>users</code> record with these fields, your sign-in method and the dates you created the account and last signed in)</td></tr>
   <tr><td>Daily challenge results: your first name and last initial (for example "Gaurav K."), or "Hidden player" if you turn
-      off <strong>Profile → Show my name on leaderboards</strong>, plus your solve time, mistakes and hints</td>
-      <td>To rank you on the daily leaderboard, which anyone using TezMind can see (including players who aren't signed in)</td>
-      <td>Google Cloud Firestore (one result per day you take part)</td></tr>
+      off <strong>Profile → Show my name on leaderboards</strong>, plus your result: time, mistakes and hints (and, for Number recall and Math, how many digits or questions you got)</td>
+      <td>To rank you on the daily leaderboards, which anyone using TezMind can see (including players who aren't signed in)</td>
+      <td>Google Cloud Firestore (one result per daily challenge you play, up to four a day)</td></tr>
   <tr><td>Game history: games played, level, score, time taken, and your theme and sound settings</td>
       <td>To show your history, progress, streaks and best scores</td>
       <td>Only on your device. It is not uploaded to our servers.</td></tr>
@@ -56,7 +56,7 @@ follow the steps on the <a href="delete-account.html">account deletion page</a>.
 
 <h2>Security</h2>
 <p>Information is sent over encrypted connections (HTTPS). Database security rules allow each signed-in user to
-read and write only their own record. Leaderboard results (display name and times only) can be read by anyone using the app, and each player can
+read and write only their own record. Leaderboard results (display name and results only: time, mistakes, hints and score) can be read by anyone using the app, and each player can
 post only their own result, once per day.</p>
 
 <h2>Children</h2>
